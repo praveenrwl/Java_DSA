@@ -1,1 +1,33 @@
+// You are given number n
+// You are given digit d
+// required to calculate frequency pf digit d in number n
 
+// DIGITS FREQUENCY 
+
+import java.util.*;
+
+class HelloWorld {
+    
+    public static int getDigitFrequency(int n,int d){
+        int count = 0;
+        while(n>0){
+            int dig = n % 10;
+            n = n / 10;
+            
+            if( dig == d){
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int digits = sc.nextInt();
+        int f = getDigitFrequency(number,digits);
+        
+        
+        System.out.println(f);
+    }
+}
