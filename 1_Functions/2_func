@@ -23,11 +23,13 @@ class HelloWorld {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number: ");
         int number = sc.nextInt();
+        System.out.print("Enter Digits: ");
         int digits = sc.nextInt();
         int f = getDigitFrequency(number,digits);
         
-        
+        System.out.print("Digit count in Number: ");
         System.out.println(f);
     }
 }
