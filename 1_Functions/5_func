@@ -1,0 +1,63 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class anybase {
+    public static int anyBaseToDecimal(int n, int b){
+        int rv = 0;
+        
+        int p = 1;
+        while(n > 0){
+            int dig = n % 10;
+            n = n / 10;
+            rv += dig * p;
+            p = p * b;
+            
+        }
+    
+        return rv;
+    }
+    
+    public static int decimalToanyBase(int n,int base) {
+		int rv = 0;
+		int p = 1;
+		
+		while(n > 0) {
+			int dig = n % base;
+			n = n/base;
+			
+			rv += dig*p;
+			p = p*10;
+		}
+		
+		return rv;
+		
+	}
+    
+    public static int getValue(int n, int b1, int b2){
+        int dec = anyBaseToDecimal(n , b1);
+        int destination = decimalToanyBase(dec, b2);
+        return destination;
+        
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int b1 = sc.nextInt();
+        int b2 = sc.nextInt();
+        
+        int d = getValue(n, b1, b2);
+        
+        System.out.println("Get Any Value : "+ d);
+    }
+}
+
+
+
+// OUTPUT
+java -cp /tmp/vBJrE999im/anybase
+172
+8
+2
+Get Any Value : 1111010
