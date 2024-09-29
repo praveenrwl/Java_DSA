@@ -1,0 +1,40 @@
+// REVERSE THE ARRAY
+
+class Array {
+    public static void printArray(int arr[]){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    
+    public static void reverseArray(int num[], int start, int end){
+        
+        while(start < end){
+            int temp = num[start];
+            num[start] = num[end];
+            num[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Normal Array");
+        int[] num = {2,3,4,5,6,7};
+        printArray(num);
+        
+        System.out.println("Reversed Array");
+        reverseArray(num, 0, num.length-1);
+        printArray(num);
+    }
+}
+
+
+OUTPUT>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Normal Array
+2 3 4 5 6 7 
+Reversed Array
+7 6 5 4 3 2 
+
+=== Code Execution Successful ===
