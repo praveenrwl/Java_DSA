@@ -8,6 +8,7 @@ Nested Loops
 3. Print them inside the inner for loop
 4. Observe the symmetry [ Optional ]
 
+>>>>>>>>>>>>>>> Patterns 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 import java.util.*;
 
@@ -24,8 +25,16 @@ class Patterns {
     public static void main(String[] args) {
         System.out.println("Patterns >>");
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
         
-        pattern(n);   
+        System.out.println("Times >>");
+        int times = sc.nextInt();
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern(n);     
+        }
+        
     }
 }
+
+>>>>>>>>>>>>>>> Patterns 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
