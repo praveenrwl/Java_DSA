@@ -1,0 +1,31 @@
+(* DATE: 6/10/2024 *)
+
+# Patterns
+
+Nested Loops
+1. For the outer loop, count the number of lines.
+2. For the innner loop, focus on the columns, & connect them somehow to the rows.
+3. Print them inside the inner for loop
+4. Observe the symmetry [ Optional ]
+
+
+import java.util.*;
+
+class Patterns {
+    public static void pattern(int n){
+    for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+}
+    
+    public static void main(String[] args) {
+        System.out.println("Patterns >>");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        pattern(n);   
+    }
+}
