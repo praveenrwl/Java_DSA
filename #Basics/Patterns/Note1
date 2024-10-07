@@ -38,7 +38,6 @@ class Patterns {
 
 >>>>>>>>>>>>>>> Patterns 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
 import java.util.*;
 
 class Pattern {
@@ -60,6 +59,123 @@ class Pattern {
         for(int i = 0; i < times; i++){
             int n = sc.nextInt();
             pattern2(n);
+        }
+        
+    }
+}
+
+
+>>>>>>>>>>>>>>> Patterns 3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern3(int n){
+        for(int i = 0; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 2 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern3(n);
+        }
+        
+    }
+}
+
+
+>>>>>>>>>>>>>>> Patterns 4 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern4(int n){
+        for(int i = 0; i <= n; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 2 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern4(n);
+        }
+        
+    }
+}
+
+
+>>>>>>>>>>>>>>> Patterns 5 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern5(int n){
+        for(int i = 0; i <= n; i++){
+            for(int j = 0; j < n-i+1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 5 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern5(n);
+        }
+        
+    }
+}
+
+
+>>>>>>>>>>>>>>> Patterns 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern6(int n){
+        for(int i = 0; i <= n; i++){
+            for(int j = 1; j < n-i+1; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 6 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern6(n);
         }
         
     }
