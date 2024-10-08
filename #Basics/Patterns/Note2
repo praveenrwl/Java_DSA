@@ -1,1 +1,246 @@
 
+>>>>>>>>>>>>>>> Patterns 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern6(int n){
+        for(int i = 0; i <= n; i++){
+            for(int j = 1; j < n-i+1; j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 6 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern6(n);
+        }
+        
+    }
+}
+
+
+>>>>>>>>>>>>>>> Patterns 7 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Space Stars Space
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern7(int n){
+        for(int i = 0; i < n; i++){
+            // Space
+            for(int sp1 = 0; sp1 < n-i-1; sp1++){
+                System.out.print(" ");
+            }
+            
+            // Stars
+            for(int j = 0; j < 2*i+1 ; j++){
+                System.out.print("*");
+            }
+            
+            // Space
+            for(int sp2 = 0; sp2 < n-i-1; sp2++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 7 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern7(n);
+        }
+
+OUTPUT >>
+Pattern 7 >>
+1
+7
+      *      
+     ***     
+    *****    
+   *******   
+  *********  
+ *********** 
+*************
+
+>>>>>>>>>>>>>>> Patterns 8 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Space Stars Space
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern8(int n){
+        for(int i = 0; i < n; i++){
+            // Space
+            for(int sp1 = 0; sp1 < i; sp1++){
+                System.out.print(" ");
+            }
+            
+            // Stars
+            for(int j = 0; j < (2*n-(2*i+1)) ; j++){
+                System.out.print("*");
+            }
+            
+            // Space
+            for(int sp2 = 0; sp2 < i; sp2++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 8 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern8(n);
+        }
+        
+    }
+}
+
+OUTPUT>>>
+Pattern 8 >>
+1
+5
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+
+>>>>>>>>>>>>>>> Patterns 9 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Space Stars Space
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern7(int n){
+        for(int i = 0; i < n; i++){
+            // Space
+            for(int sp1 = 0; sp1 < n-i-1; sp1++){
+                System.out.print(" ");
+            }
+            
+            // Stars
+            for(int j = 0; j < 2*i+1 ; j++){
+                System.out.print("*");
+            }
+            
+            // Space
+            for(int sp2 = 0; sp2 < n-i-1; sp2++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    public static void pattern8(int n){
+        for(int i = 0; i < n; i++){
+            // Space
+            for(int sp3 = 0; sp3 < i; sp3++){
+                System.out.print(" ");
+            }
+            
+            // Stars
+            for(int j1 = 0; j1 < (2*n-(2*i+1)) ; j1++){
+                System.out.print("*");
+            }
+            
+            // Space
+            for(int sp4 = 0; sp4 < i; sp4++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 8 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern7(n);
+            pattern8(n);
+        }
+        
+    }
+}
+
+OUTPUT>>
+Pattern 8 >>
+1
+5
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+
+
+
+>>>>>>>>>>>>>>> Patterns 10 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Space Stars Space
+
+import java.util.*;
+
+class Pattern {
+    
+    public static void pattern10(int n){
+        for(int i = 0; i <= (2*n-1); i++){
+            // Stars
+            
+            int stars = i;
+            if(i > n){
+                stars = 2*n-i;
+            }
+            for(int j = 1; j <= stars; j++){
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 10 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern10(n);
+        }
+        
+    }
+}
