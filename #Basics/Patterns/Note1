@@ -180,3 +180,45 @@ class Pattern {
         
     }
 }
+
+
+>>>>>>>>>>>>>>> Patterns 7 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Space Stars Space
+
+import java.util.*;
+
+class Pattern {
+    public static void pattern7(int n){
+        for(int i = 0; i < n; i++){
+            // Space
+            for(int sp1 = 0; sp1 < n-i-1; sp1++){
+                System.out.print(" ");
+            }
+            
+            // Stars
+            for(int j = 0; j < 2*i+1 ; j++){
+                System.out.print("*");
+            }
+            
+            // Space
+            for(int sp2 = 0; sp2 < n-i-1; sp2++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 7 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern7(n);
+        }
+        
+    }
+}
