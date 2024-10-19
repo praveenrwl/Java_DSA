@@ -244,3 +244,44 @@ class Pattern {
         
     }
 }
+
+
+>>>>>>>>>>>>>>> Patterns 11 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Pattern {
+    
+    public static void pattern11(int n){
+        
+        
+        for(int i = 0; i < n; i++){
+            int start1 = 1;
+            if(i % 2 == 0){
+                start1 = 1;
+            }
+            else{
+                start1 = 0;
+            }
+            for(int j = 0; j <= i; j++){
+                System.out.print(start1);
+                start1 = 1- start1;
+            }
+        System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Pattern 11 >>");
+        
+        Scanner sc = new Scanner(System.in);
+        int times = sc.nextInt();
+        
+        for(int i = 0; i < times; i++){
+            int n = sc.nextInt();
+            pattern11(n);
+        }
+        
+    }
+}
+
