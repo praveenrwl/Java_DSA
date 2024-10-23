@@ -12,7 +12,11 @@ W = 77 % 10 = 7
 w = 7 % 10 = 0
     0.7 / 10 = 0
 
+//Pseudo Code
+
+int n
 while(n > 0){
     last_digit = N % 10
     n = n / 10
+}
 
