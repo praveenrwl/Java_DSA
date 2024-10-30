@@ -1,22 +1,60 @@
 Basic Maths Concept
 
-W = 7789 % 10 = 9    //Extraction of Digits
-    778.9 / 10 = 778  //Divsion of it
+N = 7789 % 10 = 9    //Extraction of Digits
+    778.9 / 10 = 778  //Divsion of it (Integer Portion)
 
-W = 778 % 10 = 8
+N = 778 % 10 = 8
     77.8 / 10 = 77
 
-W = 77 % 10 = 7
+N = 77 % 10 = 7
     7.7 / 10 = 7
 
-w = 7 % 10 = 0
+N = 7 % 10 = 0
     0.7 / 10 = 0
 
 //Pseudo Code
 
 int n
 while(n > 0){
-    last_digit = N % 10
+    last_digit = n % 10
     n = n / 10
 }
 
+// Code >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//DIGIT EXTRACTION
+import java.util.*;
+
+class Maths {
+    
+    public static int count(int n){
+        int cnt = 0;
+        while(n > 0){
+//            int last_digit = n % 10;
+            cnt = cnt + 1;
+            n = n / 10;
+        }
+        return cnt;
+    }
+    
+    public static int count2(int n){
+        int cnt = (int)(Math.log10(n) + 1);
+        return cnt;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Count Digits: ");
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        System.out.println("Digits: " + count(n));
+        System.out.println("Digits: " + count2(n));
+        
+    }
+}
+
+//Output >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Count Digits: 
+234234
+Digits: 6
+Digits: 6
