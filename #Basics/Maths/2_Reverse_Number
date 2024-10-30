@@ -1,1 +1,49 @@
+// Reverse Number
 
+//Pseudo Code
+revN = 0
+while( n > 0){
+lastDigit = n % 10;
+n = n / 10;
+revN = (revN * 10) + lastDigit
+
+
+//Code >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//REVERSE NUMBER
+import java.util.*;
+
+class Maths {
+    
+    public static int count(int n){
+        int revN = 0;
+        while(n > 0){
+            int last_digit = n % 10;
+            revN = (revN*10) + last_digit;
+            n = n / 10;
+        }
+        
+        return revN;
+    }
+    
+    public static int count2(int n){
+        int cnt = (int)(Math.log10(n) + 1);
+        return cnt;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Reverse Numbers: ");
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        System.out.println("Digits: " + count(n));
+
+    }
+}
+
+// Output >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Reverse Numbers: 
+34567
+Digits: 76543
