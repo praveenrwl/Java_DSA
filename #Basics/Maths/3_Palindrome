@@ -1,0 +1,62 @@
+//CHECK PALINDROME NUMBER
+
+// PSEUDO CODE
+
+d = n;
+revN = 0
+while(n > 0){
+  last_digit = n % 10;
+  n = n / 10;
+  revN = (revN * 10) + last_digit;
+  }
+
+//But note as n / 10 will became 0 eventually so will store it in duplicate varibale
+
+if(revN == n)
+    palindrome
+else
+    not palindrome
+
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//REVERSE NUMBER
+import java.util.*;
+
+class Maths {
+    
+    public static String palindrome(int n){
+        int dn = n;
+        int revN = 0;
+        while(n > 0){
+            int last_digit = n % 10;
+            revN = (revN*10) + last_digit;
+            n = n / 10;
+        }
+        
+        if (revN == dn) {
+            return "Palindrome Number: " + revN;
+        } else {
+            return "Not a Palindrome Number: " + revN;
+        }
+        
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Palindrome Number: ");
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        System.out.println("Answer: " + palindrome(n));
+
+    }
+}
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Palindrome Number: 
+1233214
+Answer: Not a Palindrome Number: 4123321
+
+
