@@ -8,6 +8,43 @@ n = 35 not= 3^3 + 5^5
 // CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+import java.util.*;
+
+class Math{
+    
+    public static String Armstrong(int n){
+        int dn = n;
+        int an = 0;
+        while(n > 0){
+            int ld = n % 10;
+            an = an + (ld * ld * ld);
+            n = n / 10;
+            
+        }
+        
+        if(dn == an){
+            return "Armstrong Number: " + an;
+        }
+        else{
+            return "Not Armstrong Number: " + an;
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(" ARMSTRONG NUMBER");
+    
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    String r = Armstrong(n);
+    System.out.println(" ARMSTRONG NUMBER: " + r);
+    }
+}
 
 
 // OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ ARMSTRONG NUMBER
+  371
+ ARMSTRONG NUMBER: Armstrong Number: 371
+
+=== Code Execution Successful ===
