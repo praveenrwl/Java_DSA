@@ -1,0 +1,135 @@
+GCD : GREATEST COMMMON DIVISIOR
+HCF : HIGGEST COMMON FACTOR
+
+
+n = 9   >>> 1, 3, 9
+n = 12  >>> 1, 2, 3, 4, 6, 12
+
+GCD of  9, 12 is 3
+
+n = 11   >>> 11, 13
+n = 13  >>> 11, 13
+
+GCD of  11, 13 is 1
+
+
+//PSUEDO CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+res = 1;
+for( i = 1; i <= n1; i++){
+  if(n1 % i == 0 && n2 % i == 0){
+    res = i;
+    }
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+
+class Math{
+    
+    public static String gcd(int n1, int n2){
+        
+        int res = 1;
+        
+        for(int i = 1; i <= n1; i++){
+            if(n1 % i == 0 && n2 % i == 0){
+                res = i;
+            }
+        }
+        return "GCD is: " +  res;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("<< GCD / HCF >>");
+    
+    Scanner sc = new Scanner(System.in);
+    int n1 = sc.nextInt();
+    int n2 = sc.nextInt();
+    String res = gcd(n1, n2);
+    System.out.println(res);
+    sc.close();
+    
+    }
+}
+
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ GCD / HCF 
+9
+12
+GCD is: 3
+
+
+// EUCLIDEAN ALGORITHM
+
+n1, n2
+
+gcd(n1, n2)  = gcd(n1 - n2, n2)    n1>n2
+gcd(a, b) = gcd(a - b, b)    a>b
+
+gcd(20,13) = gcd(7, 13)
+gcd(13, 7) = gcd(6, 7)
+gcd(7, 6) = gcd(1, 6)
+gcd(6, 1) = gcd(5, 1)
+gcd(5, 1) = gcd(4, 1)
+gcd(4, 1) = gcd(3, 1)
+gcd(3, 1) = gcd(2, 1)
+gcd(2, 1) = gcd(1, 1)
+gcd(1, 1) = gcd(0, 1)
+
+
+//Pseudo Code
+a, b
+while( a > 0 && b > 0){
+  if(a > b) 
+    a = a % b;
+  else
+    b = b % a;
+
+if(a==0) print(b)
+else print(a)
+
+TIME COMPLEXITY
+
+O(log of phi (min(a, b)))
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+
+class Math{
+    
+    public static String gcd(int a, int b){
+        while(a > 0 && b > 0){
+            if(a > b) a = a % b;
+            else b = b % a;
+        }
+        
+        if(a == 0) return "GCD: " + b;
+        return  "GCD: " + a;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("<< GCD / HCF >>");
+    
+    Scanner sc = new Scanner(System.in);
+    int n1 = sc.nextInt();
+    int n2 = sc.nextInt();
+    String res = gcd(n1, n2);
+    System.out.println(res);
+    sc.close();
+    
+    }
+}
+
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+<< GCD / HCF >>
+12
+9
+GCD: 3
+
+=== Code Execution Successful ===
