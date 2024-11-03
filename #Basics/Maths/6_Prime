@@ -5,3 +5,97 @@ NUMBER THAT HAS EXCATLY FACTORS 1 or ITSELF
 N = 11      1 & 11
 N = 13      1 & 13
 
+// CODE >>>>>>>>> BRUTE FORCE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Math{
+    
+    public static String prime(int n){
+        int count = 0;
+        if(n <= 1){
+            return  "Not Prime Number";
+        }
+        
+        for(int i = 1; i <= n; i++){
+            if(n % i == 0){
+                count++;
+            }
+        }
+        if(count == 2){
+            return "Prime Number";
+        }
+        else{
+            return "Not Prime Number";
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(" PRINT ALL DIVSIONS ");
+    
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    String res = prime(n);
+    System.out.println(res);
+    sc.close();
+    
+    }
+}
+
+TIME COMPLEXITY : O(N)
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ PRINT ALL DIVSIONS 
+7
+Prime Number
+
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+import java.util.*;
+
+class Math{
+    
+    public static String prime(int n){
+        int count = 0;
+        if(n <= 1){
+            return  "Not Prime Number";
+        }
+        
+        for(int i = 1; i*i <= n; i++){
+            if(n % i == 0){
+                count++;
+                if((n/i) != i){
+                    count++;
+                }
+            }
+        }
+        if(count == 2){
+            return "Prime Number";
+        }
+        else{
+            return "Not Prime Number";
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(" PRINT ALL DIVSIONS ");
+    
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    String res = prime(n);
+    System.out.println(res);
+    sc.close();
+    
+    }
+}
+
+Time Complexity : sqroot n
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ PRINT ALL DIVSIONS 
+7
+Prime Number
