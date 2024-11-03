@@ -43,3 +43,57 @@ class Math{
 36
 1, 2, 3, 4, 6, 9, 12, 18, 36, 
 === Code Execution Successful ===
+
+
+// CODE - OPTIMAL SOLUTION>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+import java.util.*;
+
+class Math {
+    
+    public static int[] printAD(int n, int[] size) {
+        // Allocate memory for the array of divisors
+        int[] divisors = new int[n]; // Maximum possible divisors is n
+        int count = 0;
+
+        // Find divisors
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                divisors[count++] = i; 
+            }
+        }
+        
+        // Update the size parameter with the count of divisors
+        size[0] = count;
+        // Return the array of divisors
+        return divisors;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("PRINT ALL DIVISORS");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int[] size = new int[1]; // Size array to store the number of divisors
+        
+        int[] divisors = printAD(n, size);
+        
+        System.out.print("Divisors of " + n + " are: "); // Changed 'number' to 'n'
+        for (int i = 0; i < size[0]; i++) {
+            System.out.print(divisors[i] + " ");
+        }
+        System.out.println();
+        
+        // No need to free memory in Java; handled by garbage collector
+        sc.close(); // Close the scanner to prevent resource leaks
+    }
+}
+
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ PRINT ALL DIVSIONS 
+36
+Divisors of 36 are: 1 2 3 4 6 9 12 18 36 
+
+=== Code Execution Successful ===
