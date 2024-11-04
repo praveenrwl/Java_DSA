@@ -1,0 +1,18 @@
+// RECURSION 
+
+When a function calls itself until a specified condition is met.
+
+
+void f(){
+  print(1);
+  f();        // NON ENDING RECURSION
+}
+
+main(){
+  f(); 
+}
+
+It will run till it runs out of memory and throws the segmented fault
+
+
+
