@@ -13,6 +13,54 @@ main(){
 }
 
 It will run till it runs out of memory and throws the segmented fault
+STACK OVERFLOW : func call is going on and runs out of memory
+
+Main func calls the funcs and in func call itself till func call executed successfully
+
+BASE CONDITIONs
+
+count = 0
+f(){
+  print(count)
+  count++
+  f()
+}
+
+main(){
+  f()      // OUTPUT 0 , 1, 2, ............. 
+}
+
+condition to stop this >> Base Coondition
+
+count = 0
+f(){
+  if(count == 4)
+      return;
+  print(count)
+  count++
+  f()
+}
+
+main(){
+f()      // OUTPUT 0, 1, 2, 3
+}
 
 
+// CODE >>>>>>>>>
 
+int count = 0
+void print(){
+  if(count == 3) return;
+    print count
+  print()
+}
+int main(){
+  print();
+
+  }
+
+
+// RECURSION
+// BASE CASE
+// STACK OVERFLOW
+// RECURSION TREE
