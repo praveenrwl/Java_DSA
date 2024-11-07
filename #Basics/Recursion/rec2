@@ -1,4 +1,4 @@
-// BASIC RECURSION PROBLEMS
+// BASIC RECURSION PROBLEMS >>
 
 Q1. Print name n times.
 Q2. Print linearly from 1 to N.
@@ -7,8 +7,8 @@ Q4. Print Linearly from 1 to N (But by backtrack)
 Q5. Print from N to 1 (By Backtrack)
 
 
-// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<< Q1. Print name n times. >>>
 
 import java.util.*;
 
@@ -32,6 +32,41 @@ class Recursion{
     }
 }
 
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    raj
+    raj
+    raj
+
+
+// TIME COMPLEXITY >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+f(1, 3) >> f(2, 3) >> f(3, 3) >> f(4, 3)
+
+TC >> O(N)
 
 
 
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<< Q2. Print linearly from 1 to N. >>>
+
+import java.util.*;
+
+class Recursion {
+    
+    public static void nTimes(int i, int n){
+        if( i > n){
+            return ;
+        }
+        System.out.print(i);
+        return nTimes(i+1, n);
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Print linearly from 1 to N.");
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        nTimes(1, n);
+        
+    }
+}
