@@ -19,4 +19,61 @@ Q1> Sum of first N Numbers
         f(n, 0)
     }
 
+***Functional
+f(n) = sum of first N No.
+f(n){
+  if(n==0)
+    return 0;
+  return n + f(n-1);
+}
+main(){
+  n = 3;
+  print(f(n));
+}
+
+
 // CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+class Main {
+    
+    public static int sum(int n){
+        if(n == 0){
+            return 0;
+        }
+        else{
+            return n + sum(n-1);
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Functional Recursion: ");
+        int n = 4;
+        System.out.println(sum(n));
+        
+    }
+}
+
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+class Main {
+    
+    public static int sum(int n, int add){
+        if(n < 1){
+            return add;
+        }
+        else{
+            return  sum(n-1, add+n);
+        }
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Parameterized Recursion: ");
+        int n = 4;
+        int add = 0;
+        System.out.println(sum(n, add));
+        
+    }
+}
