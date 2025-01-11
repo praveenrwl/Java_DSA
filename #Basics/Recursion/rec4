@@ -3,11 +3,11 @@ Q1> REVERSE THE ARRAY
 
 Pseudo Code >>
 
-f(l, r){
-  if(l >= r)
+f(left, right){
+  if(left >= right)
     return
-  swap(a[l], a[r]);
-  f(l+1, r-1);
+  swap(a[left], a[right]);
+  f(left+1, right-1);
 }
 
 main(){
@@ -26,3 +26,114 @@ swap(a[i], a[n-i-1]);
 
 // CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+import java.util.*;
+
+class Main {
+    public static void rev(int left, int arr[], int right){
+        if(left >= right){
+            return;
+        }
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        
+        rev(left + 1, arr, right - 1);
+        
+        
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("REVERSE THE ARRAY");
+        Scanner sc =  new Scanner(System.in);
+        System.out.println(" Enter Size: ");
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+        
+        System.out.println(" Enter elements: ");
+        for(int i = 0; i < size; i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        rev(0, arr, size-1);
+        
+                System.out.println("Reversed Array:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+    }
+}
+}
+
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+REVERSE THE ARRAY
+ Enter Size: 
+5
+ Enter elements: 
+1
+2
+3
+4
+5
+Reversed Array:
+5 4 3 2 1 
+=== Code Execution Successful ===
+
+
+
+// NOTES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// CHECK IF A STRING IS PALINDROME
+f(i){
+  if(s[i] != s[n-i-1])
+    return false;
+  return f(i+1);
+
+main{
+
+}
+
+// CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+
+class Main {
+    public static boolean pld(int i, String s){
+        if(i >= s.length() / 2){
+            return true;
+        }
+        if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
+            return false;
+        }
+        
+        return pld(i+1, s);
+        
+        
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("PALINDROME");
+        Scanner sc = new Scanner(System.in);
+        
+        // Prompt the user for input
+        System.out.println("Enter a string to check if it's a palindrome:");
+        String s = sc.nextLine(); // Read the full string
+        
+        // Check if the string is a palindrome and print the result
+        if (pld(0, s)) {
+            System.out.println("The string is a palindrome.");
+        } else {
+            System.out.println("The string is not a palindrome.");
+        }
+}
+}
+
+
+// OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+PALINDROME
+Enter a string to check if it's a palindrome:
+madam
+The string is a palindrome.
+
+=== Code Execution Successful ===
