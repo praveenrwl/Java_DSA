@@ -1,0 +1,41 @@
+# NOTES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+MULTIPLE RECURSION
+
+FIBONACCI SERIES
+
+f(n) -> f(n-1) + f(n-2)
+
+f(n){
+  if(n <= 1)
+    return n;
+  last = f(n-1)
+  slast = f(n-2)
+  return last + slast;
+}
+
+# CODE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+class Main {
+    public static int fib(int n){
+        if (n <= 1){
+            return n;
+        }
+        int last = fib(n-1);
+        int slast = fib(n-2);
+        return last + slast;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("Fibonaci Series");
+        
+        System.out.println(fib(10));
+    }
+}
+
+# OUTPUT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Fibonaci Series
+55
+
+=== Code Execution Successful ===
